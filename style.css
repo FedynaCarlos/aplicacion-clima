@@ -1,39 +1,85 @@
-body{
-    font-family:  "Roboto Mono", serif;
-background-color: rgb(1, 88, 114);
-color: white;
+body {
+    font-family: "Roboto Mono", serif;
+    background-color: rgb(66, 145, 172);
+    color: white;
+    margin: 0;
+    padding: 0;
 }
-.container{
-    max-width: 60%;
-    margin: 0 auto;
-    padding: 20px;
+
+.container {
+    max-width: 90%;
+    width: 600px;
+    margin: 20px auto; /* Centrado con separación de 20px arriba */
+    padding: 10px;
     border-radius: 10px;
     text-align: center;
     background-color: rgb(10, 67, 85);
-    box-shadow: 0 2px 6px rgb(44,44,44);
+    box-shadow: 0 2px 6px rgb(44, 44, 44);
 }
-h1, h2, p{
+
+h1, h2, p {
     color: white;
 }
+
 h1:hover, h2:hover, p:hover {
     color: rgb(221, 206, 206);
 }
-input[type="text"]{
+
+input[type="text"] {
     padding: 10px;
     border-radius: 10px;
     font-size: 16px;
-    width: 70%;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(0, 166, 255);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(0, 140, 215);
+}
+
+#responseData {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Media queries para responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
     }
-    button{
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: rgb(0,166,255);
-        color: white;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
+
+    input[type="text"] {
+        width: 100%;
     }
-    #responseData{
-        margin-top: 20px;
-        font-size: 18px;
+}
+
+@media (max-width: 580px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+        text-align: center; /* Centrado del contenido */
     }
+
+    h1, h2, p {
+        font-size: 1.2em;
+    }
+
+    /* Ajustar el input y el botón para que ambos tengan el mismo ancho total */
+    .container input[type="text"], .container button {
+        width: 90%; /* 100% del ancho disponible */
+        margin-bottom: 10px; /* Espacio debajo de ambos */
+    }
+}
